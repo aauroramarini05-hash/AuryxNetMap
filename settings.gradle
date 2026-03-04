@@ -1,0 +1,2 @@
+rootProject.name='AuryxNetMap'
+include ':app'

@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.xdustatom.auryxnetmap'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.xdustatom.auryxnetmap"
+        minSdk 24
+        targetSdk 34
+        versionCode 130401
+        versionName "1.304.01-beta"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'org.osmdroid:osmdroid-android:6.1.16'
+}
