@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -10,7 +11,7 @@ android {
         applicationId "com.xdustatom.auryxnetmap"
         minSdk 24
         targetSdk 34
-        versionCode 130401
+        versionCode 1
         versionName "1.304.01-beta"
     }
 
@@ -19,9 +20,17 @@ android {
             minifyEnabled false
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'org.osmdroid:osmdroid-android:6.1.16'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22"
 }
